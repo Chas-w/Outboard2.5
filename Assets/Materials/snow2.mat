@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: snow2
+  m_Shader: {fileID: 4800000, guid: 7c437a0dfd64d314ca7fa7965c39b648, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _IBL:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _albedo:
+        m_Texture: {fileID: 2800000, guid: 56fabfb96aa80904c9942277b64edfa2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _displacementMap:
+        m_Texture: {fileID: 2800000, guid: 875740426e359d74288ffce9e1e5622f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normalMap:
+        m_Texture: {fileID: 2800000, guid: 5d1f69f31b783b04c8df9693e8c6a8e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _roughness:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _displacement: 0.75
+    - _displacementIntensity: 1
+    - _fresnelPower: 2.12
+    - _normalIntensity: 0.032
+    - _reflectivity: 0.399
+    - _scale: 40.1
+    m_Colors:
+    - _color: {r: 0.8537736, g: 0.92061996, b: 1, a: 1}
+  m_BuildTextureStacks: []

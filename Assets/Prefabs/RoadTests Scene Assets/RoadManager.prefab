@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2459070035946595406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2459070035946595407}
+  - component: {fileID: 2459070035946595404}
+  m_Layer: 0
+  m_Name: RoadManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2459070035946595407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2459070035946595406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2459070035946595404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2459070035946595406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f219e5c19c2eab4db4af8306e7616cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSegmentSprite: {fileID: 21300000, guid: cb5eff5c5737e3e48b06f61e343b0e0c, type: 3}
+  cam: {fileID: 0}
+  trackLength: 3000
+  normSpeed: 5
+  maxSpeed: 0
+  speed: 0
+  maxSpeedMultiplier: 4
+  ZPos: 0
+  drawDistance: 24
+  roadAddonsToRender: 50
+  segmentLength: 2
+  roadWidth: 50
+  cameraElevation: 12
+  cameraHorizontalOffset: 0
+  FOV: 1
+  slightUpDownRotation: 0.2
+  renderedSegmentHolder: {fileID: 0}
+  renderedSegmentPrefab: {fileID: 2958758982541098870, guid: 425439c9b4268f846942d7aabbd7c2ff, type: 3}
+  renderedSegmentsList: []
+  segmentMeshDimensions: {x: 8, y: 8}
+  renderedRoadAddonHolder: {fileID: 0}
+  roadAddonSpriteScale: 3
+  roadAddonSpriteVerticalDepthOffset: 0.014
+  treeFrequencyPercentage: 0.1
+  maxCurveDistance: 80
+  minCurveDistance: 20
+  maxCurveLengthInSegments: 30
+  maxCurveCurviness: 5
+  segmentMaximumDecorations: 20
+  roadObjectSprites:
+  - {fileID: 21300000, guid: f751011290c28e944beae9c456e1a4a7, type: 3}
+  roadObjectPrefabs:
+  - {fileID: 7750459089507772532, guid: de0a1d7a6062e964d92063170e2a26be, type: 3}
