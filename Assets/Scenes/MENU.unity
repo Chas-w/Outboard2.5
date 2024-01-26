@@ -155,7 +155,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.4669811, g: 0.8711446, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS 'Space' TO START
+  m_text: PRESS ANY KEY TO START
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09e0f595bbf2795439dec400a27d656d, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: 09e0f595bbf2795439dec400a27d656d, type: 2}
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.15
+  m_fontSize: 41.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

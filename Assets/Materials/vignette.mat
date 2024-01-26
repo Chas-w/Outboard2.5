@@ -59,9 +59,9 @@ Material:
     - _Width: 0.45
     - _intensity: 1
     - _resolution: 128
-    - _saturation: 0.75
+    - _saturation: 1
     - _steps: 7.41
-    - _vr: 0.78650266
+    - _vr: 0.79
     - _vs: 0.528
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
