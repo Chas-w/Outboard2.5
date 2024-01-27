@@ -28,6 +28,6 @@ Material:
     m_Floats:
     - _mr: 0.821
     - _ms: 0.342
-    - _rs: 0.0004399993
+    - _rs: 0.002
     m_Colors: []
   m_BuildTextureStacks: []

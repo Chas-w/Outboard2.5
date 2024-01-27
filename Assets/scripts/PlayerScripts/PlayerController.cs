@@ -137,36 +137,6 @@ public class PlayerController : MonoBehaviour
         }
         #endregion
 
-        /* Centrifugal Force
-        #region apply centrifugal force
-
-        float ZPos = roadManager.ZPos;
-        
-        if (roadManager.FindSegment(ZPos).curviness != 0)
-        {
-            //myBody.AddForce(new Vector2(-roadManager.FindSegment(ZPos).curviness * centrifugalForceMultiplier, 0f), ForceMode2D.Impulse);
-
-
-            //This little bit is what we added!
-
-            
-            if (roadManager.FindSegment(ZPos).index > roadManager.segmentToCalculateLoopAt)
-            {
-                netHorizontalForce += new Vector2(-roadManager.endSegments[roadManager.FindSegment(ZPos).index - roadManager.segmentToCalculateLoopAt].curviness * Mathf.Pow(centrifugalForceMultiplier, 2) * roadManager.speed, 0f);
-            }
-            else
-            {
-                netHorizontalForce += new Vector2(-roadManager.FindSegment(ZPos).curviness * Mathf.Pow(centrifugalForceMultiplier, 2) * roadManager.speed, 0f);
-            }
-
-
-            Debug.Log(-roadManager.FindSegment(ZPos).curviness);
-        }
-
-        myBody.AddForce(netHorizontalForce, ForceMode2D.Impulse);
-            
-        #endregion
-        */
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -183,10 +153,23 @@ public class PlayerController : MonoBehaviour
         //Slidey movement
         if (moveSpeed < horzSpeed * HorzMovement) { moveSpeed += horzIncriment; }
         else if (moveSpeed > horzSpeed * HorzMovement) { moveSpeed -= horzIncriment; }
-        
+
+
+        //Calculating centrifugal force!
+        float ZPos = roadManager.ZPos;
+        float centrifugalForce = 0;
+
+        if (roadManager.FindSegment(ZPos).index > roadManager.segmentToCalculateLoopAt)
+        {
+            centrifugalForce += -roadManager.endSegments[roadManager.FindSegment(ZPos).index - roadManager.segmentToCalculateLoopAt].curviness * Mathf.Pow(centrifugalForceMultiplier, 2) * roadManager.speed;
+        }
+        else
+        {
+            centrifugalForce += -roadManager.FindSegment(ZPos).curviness * Mathf.Pow(centrifugalForceMultiplier, 2) * roadManager.speed;
+        }
 
         //apply movement to rigid body
-        myBody.velocity = new Vector3(moveSpeed, 0f, 0f);
+        myBody.velocity = new Vector3(moveSpeed + centrifugalForce, 0f, 0f);
     }
     public void MoveInput()
     {

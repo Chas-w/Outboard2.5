@@ -32,7 +32,7 @@ Material:
     m_Floats:
     - _outlineThreshold: 0
     - _softness: 0.335
-    - _threshold: 1
+    - _threshold: 0.15
     m_Colors:
     - _color: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

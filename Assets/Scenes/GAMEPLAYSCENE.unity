@@ -17502,7 +17502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1875714161753982778, guid: da1ee8a6ddb75d9499749f19f2a26e01, type: 3}
       propertyPath: centrifugalForceMultiplier
-      value: 0.19
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 1875714161753982779, guid: da1ee8a6ddb75d9499749f19f2a26e01, type: 3}
       propertyPath: m_RootOrder
