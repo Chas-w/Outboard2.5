@@ -188,17 +188,18 @@ public class PlayerController : MonoBehaviour
         }
 
         //SPEEDUP
+        /*
         if (speedUpTimer <= 0)
         {
             canSpeed = true;
         }
-
+        */
         if (canSpeed && (Input.GetKeyDown(KeyCode.W) || (Input.GetMouseButton(0) && ((mousePos.x < rightScreen.position.x) && (mousePos.x > leftScreen.position.x)))))
         {
             speedUp = true;
             canSpeed = false;
-        } 
-
+        } else if ((Input.GetKeyUp(KeyCode.W) || (Input.GetMouseButtonUp(0) && ((mousePos.x < rightScreen.position.x) && (mousePos.x > leftScreen.position.x))))) { speedUp = false; canSpeed = true;  }
+        /*
         if (speedUp && speedUpTimer <= speedUpCDTimerMax)
         {
             speedUpTimer++;
@@ -211,6 +212,7 @@ public class PlayerController : MonoBehaviour
         {
             speedUpTimer--;
         }
+        */
 
     }
     public void MoveAnim()
