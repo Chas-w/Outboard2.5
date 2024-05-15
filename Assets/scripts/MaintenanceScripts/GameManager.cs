@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     public float currentScore;
     public float finalScore;
     public float highestScore;
+
+    //This next part is for managing the segment where players input their scores!
+    public bool inputtedScore = false;
+
+
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -36,19 +41,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.anyKey)
+        if (Input.anyKeyDown)
         {
             if (SceneManager.GetActiveScene().name == "MENU")
             {
                 SceneManager.LoadScene("GAMEPLAYSCENE");
             }
-            if (SceneManager.GetActiveScene().name == "SCOREBOARD")
-            {
-                SceneManager.LoadScene("MENU");
-            }
         }
 
-        if (SceneManager.GetActiveScene().name == "GAMEPLAYSCENE") 
+        if (SceneManager.GetActiveScene().name == "GAMEPLAYSCENE")
         {
             timer = GameObject.Find("inGameUI");
             Timer score = timer.GetComponent<Timer>();
@@ -56,14 +57,36 @@ public class GameManager : MonoBehaviour
 
 
             GameObject player = GameObject.Find("player");
-             PlayerController playerController = player.GetComponent<PlayerController>();
+            PlayerController playerController = player.GetComponent<PlayerController>();
 
             if (playerController.health <= 0)
             {
+
+                inputtedScore = false;
+
                 SceneManager.LoadScene("SCOREBOARD");
             }
         }
 
+
+
+        if (SceneManager.GetActiveScene().name == "SCOREBOARD" && inputtedScore)
+        {
+            Debug.Log("We're ready to go!!!");
+
+            
+
+            if (Input.anyKeyDown)
+            {
+                inputtedScore = false;
+
+                SceneManager.LoadScene("MENU");
+            }
+
+        }
+
+
+        /* Old stuff I commented out to make room for the new score system.
         if (SceneManager.GetActiveScene().name == "SCOREBOARD")
         {
             finalScore = currentScore;
@@ -72,6 +95,12 @@ public class GameManager : MonoBehaviour
                 highestScore = currentScore;
             }
         }
+        */
+
+
 
     }
+
+    
+
 }
